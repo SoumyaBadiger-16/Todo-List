@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #ff6b6b, #f7b733);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+  text-align: center;
+  padding: 30px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.todo-input {
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  width: 350px;
+  border-radius: 6px 0 0 6px;
+}
+
+.todo-button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  background: white;
+  color: #ff6b6b;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  transition: 0.3s;
+}
+
+.todo-button:hover {
+  background: #ff6b6b;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.todo-list {
+  list-style: none;
+  width: 420px;
+}
+
+.todo {
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.todo li {
+  flex: 1;
+  padding: 12px;
+}
+
+.complete-btn,
+.trash-btn {
+  border: none;
+  padding: 12px 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #2ecc71;
+}
+
+.complete-btn:hover {
+  background: #27ae60;
+}
+
+.trash-btn {
+  background: #e74c3c;
+}
+
+.trash-btn:hover {
+  background: #c0392b;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.todo {
+    transition: all 0.5s ease;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* CUSTOM SELECTOR */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #ff6f47;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+
+/* Arrow */
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  color: white;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ff6f47;
+}
